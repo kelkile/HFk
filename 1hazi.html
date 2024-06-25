@@ -107,6 +107,61 @@
         .inverted p {
             margin: 0;
         }
+
+         /* Reszponzívitás */
+         @media (max-width: 360px) {
+            body {
+                font-size: 14px;
+            }
+
+            .form_container {
+                padding: 10px;
+            }
+
+            .form_container input[type="submit"] {
+                padding: 8px 16px;
+            }
+        }
+
+        /* Dark mode*/
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+
+            .inverted {
+                background-color: #e0e0e0;
+                color: #121212;
+            }
+
+            footer {
+                background-color: #e0e0e0;
+                color: #121212;
+            }
+
+            .form_container {
+                border: 1px solid #444;
+            }
+
+            .form_container input[type="text"],
+            .form_container input[type="tel"],
+            .form_container input[type="number"],
+            .form_container input[type="email"],
+            .form_container textarea {
+                border: 1px solid #444;
+                background-color: #333;
+                color: #e0e0e0;
+            }
+
+            .form_container input[type="submit"] {
+                background-color: #006400;
+            }
+
+            .form_container input[type="submit"]:hover {
+                background-color: #004d33;
+            }
+        }
     </style>
 </head>
 
@@ -117,13 +172,12 @@
     <div class="inverted">
         <p><a href="#bottom">Go to the bottom of the site</a></p>
     </div>
-    <!-- 3-6 bekezdés -->
+    <!-- 3-6 bekezdés, navigáció1, ami ugrál a paragrafusok között -->
     <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. <span class="random_text_color">Lorem
-            Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.</span> It has survived not only five centuries, but also the
-        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+        <a href="#Lorem">Lorem Ipsum</a> is simply dummy text of the printing and typesetting industry. <span class="random_text_color">Lorem
+        Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book.</span> It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
         with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
         publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
@@ -144,7 +198,7 @@
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
         and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the <a id="1960s"></a>1960s
         with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
         publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
@@ -156,14 +210,18 @@
         with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
         publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
+    <!-- Navigáció2, ami ugrál a paragrafusok között -->
     <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+        <a id="Lorem"></a>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
         and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
         leap into electronic typesetting, remaining essentially unchanged. <span class="random_text_color"> It was
-            popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum. </span>
+        popularised in the <a href="#1960s">1960s</a> with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+        publishing software like Aldus PageMaker including versions of Lorem Ipsum. </span>
+    </p>
+     <!-- Hivatkozás, ami külön oldalon nyílik meg. -->
+    <p>
+        <a href="https://www.example.com" target="_blank">Go to Example.com</a>
     </p>
     <!-- Cikk küldése ismerősnek űrlap -->
     <h2>Cikk küldése ismerősnek</h2>
